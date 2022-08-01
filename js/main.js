@@ -22,6 +22,7 @@ function renderprojs() {
     <div class="portfolio-caption">
       <h4>${proj.name}</h4>
       <p class="text-muted">${proj.title}</p>
+      <p>${proj.labels}</p>
     </div>
   </div>
         `
@@ -47,12 +48,14 @@ function renderModal() {
                 <!-- Project Details Go Here -->
                 <h2>${proj.name}</h2>
                 <p class="item-intro text-muted">${proj.title}</p>
+                
                 <img class="img-fluid d-block mx-auto" src="${proj.modalImage}" alt="">
                 <p>${proj.desc}</p>
                 <ul class="list-inline">
                   <li>${proj.publishedAt}</li>
                   <li>Client: ${proj.name}</li>
                   <li>Category: ${proj.title}</li>
+                  <button><a href="${proj.link}" target="_blank">Click Me</a></button>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -66,6 +69,6 @@ function renderModal() {
   </div>
     `
     )
-    $('.beko').html(strHtmls)
+    $('.single-modal').html(strHtmls)
 
 }
