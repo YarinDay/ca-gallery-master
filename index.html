@@ -34,7 +34,14 @@
 
     <!-- Contact -->
     <section id="contact">
-      <h4>Contact Me</h4>
+      <h4 class="contact-me-header">Contact Me</h4>
+      <h6 class="contact-info">Your E-mail</h6>
+      <input class="email" type="email" placeholder="name@example.com" />
+      <h6 class="contact-info">Subject</h6>
+      <input class="subject" type="text" placeholder="Type subject here" />
+      <h6 class="contact-info">Message Body</h6>
+      <textarea class="message" type="text" placeholder="Type message text here"></textarea>
+      <button class="send-contact-info" onclick="onClickSubmitContact()">Submit</button>
     </section>
 
   </aside>
@@ -60,7 +67,7 @@
             <a class="nav-link js-scroll-trigger" href="#me">Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" onClick="openCanvas()">Contact</a>
           </li>
         </ul>
       </div>

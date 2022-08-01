@@ -55,7 +55,7 @@ function renderModal() {
                   <li>${proj.publishedAt}</li>
                   <li>Client: ${proj.name}</li>
                   <li>Category: ${proj.title}</li>
-                  <button><a href="${proj.link}" target="_blank">Click Me</a></button>
+                  <button class="modal-btn"><a href="${proj.link}" target="_blank">Click Me</a></button>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
@@ -71,4 +71,14 @@ function renderModal() {
     )
     $('.single-modal').html(strHtmls)
 
+}
+
+function onClickSubmitContact() {
+    const sub = $('.subject').val()
+    const email = $('.email').val()
+    const msg = $('.message').val()
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${sub}&body=${msg}`)
+    $('.subject').val('') 
+    $('.email').val('') 
+    $('.message').val('') 
 }
